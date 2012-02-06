@@ -1,4 +1,5 @@
-palindrome x = (show x) == reverse (show x)
-products = [xs*ys | xs <- [100..999], ys <- [100..999]]
+palindrome x = show x == (reverse . show) x
 
-main = print $ maximum $ filter palindrome products
+main = print $ maximum $ filter palindrome [xs*ys | xs <- [100..999], ys <- [100..999]] 
+		  
+		  
