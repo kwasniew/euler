@@ -21,6 +21,6 @@ number = "73167176531330624919225119674426574742355349194934\
 \05886116467109405077541002256983155200055935729725\
 \71636269561882670428252483600823257530420752963450"
 
-fives = [map digitToInt $ take 5 $ drop x number | x <- [1..(length number - 5)]]
+fives = [map digitToInt $ take 5 $ drop x number | x <- [0..(length number - 5)]]
 
 main = print $ maximum $ map product fives
